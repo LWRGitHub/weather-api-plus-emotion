@@ -7,7 +7,7 @@
         server.
     #}
     <h1>Weather in San Francisco</h1>
-    <p>on Saturday, August 29, 2020</p>
+    <p>on Saturday, {{date.strftime("%m/%d/%Y")}}</p>
 
 
     {#
@@ -15,10 +15,10 @@
         Replace 'F' with the appropriate units.
     #}
     <ul>
-        <li>Description: </li>
-        <li>Temperature: ° F</li>
-        <li>Min: ° F</li>
-        <li>Max: ° F</li>
+        <li>Description: {{description}}</li>
+        <li>Temperature: {{temp}}° {{units_letter}}</li>
+        <li>Min: {{min_temp}}° {{units_letter}}</li>
+        <li>Max: {{max_temp}}° {{units_letter}}</li>
     </ul>
 
 

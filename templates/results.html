@@ -7,19 +7,19 @@
         server 
     #}
     <h1>Weather in San Francisco</h1>
-    <p>on Saturday, August 29, 2020</p>
+    <p>on Saturday, {{date.strftime("%m/%d/%Y")}}</p>
     
     {#
         TODO: Add the temperature, description, humidity, wind speed, sunrise,
         & sunset below. Replace 'F' with the appropriate units.
     #}
     <ul>
-        <li>Temperature: ° F</li>
-        <li>Description: </li>
-        <li>Humidity: %</li>
-        <li>Wind speed:  miles/hour</li>
-        <li>Sunrise: </li>
-        <li>Sunset: </li>
+        <li>Temperature: {{temp}}° {{units_letter}}</li>
+        <li>Description: {{description}} </li>
+        <li>Humidity: {{humidity}}%</li>
+        <li>Wind speed:  {{wind_speed}} miles/hour</li>
+        <li>Sunrise: {{sunrise.strftime("%H:%M:%S")}}</li>
+        <li>Sunset: {{sunset.strftime("%H:%M:%S")}}</li>
     </ul>
     
 </section>
