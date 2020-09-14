@@ -120,7 +120,7 @@ def get_max_temp(results):
     return high_temp
 
 def get_lat_lon(city_name):
-    """  """
+    """ Geting lat & lon """
     geolocator = Nominatim(user_agent='Weather Application')
     location = geolocator.geocode(city_name)
     if location is not None:
