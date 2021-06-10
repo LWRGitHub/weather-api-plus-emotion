@@ -64,6 +64,7 @@ def results():
     # parameters.
     city = request.args.get('city')
     units = request.args.get('units')
+    emotion = request.args.get('emotion')
 
     print(city)
 
@@ -91,7 +92,8 @@ def results():
         'wind_speed': result_json['wind']['speed'],
         'sunrise': sunrise,
         'sunset': sunset,
-        'units_letter': get_letter_for_units(units)
+        'units_letter': get_letter_for_units(units),
+        'emotion': emotion
     }
 
     return render_template('results.html', **context)
@@ -155,11 +157,12 @@ def historical_results():
         # https://api.openweathermap.org/data/2.5/onecall/timemachine?lat={lat}&lon={lon}&dt={time}&appid={YOUR API KEY}
 
     }
+    # print(params)
 
     result_json = requests.get(url, params=params).json()
 
     # Uncomment the line below to see the results of the API call!
-    # pp.pprint(result_json)
+    pp.pprint(result_json)
 
     result_current = result_json['current']
     result_hourly = result_json['hourly']

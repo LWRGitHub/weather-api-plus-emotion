@@ -1,3 +1,7 @@
-# Homework 3: Weather API
+# Weather API
 
-Instructions go here
+## Install, Setup & Run
+```
+pip3 install -r requirements.txt
+python3 app.py
+```

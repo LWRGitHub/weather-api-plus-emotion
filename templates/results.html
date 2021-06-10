@@ -2,17 +2,11 @@
 {% block content %}
 
 <section>
-    {#
-        TODO: Replace the hard-coded city and date below with data from the 
-        server 
-    #}
-    <h1>Weather in San Francisco</h1>
-    <p>on Saturday, {{date.strftime("%m/%d/%Y")}}</p>
     
-    {#
-        TODO: Add the temperature, description, humidity, wind speed, sunrise,
-        & sunset below. Replace 'F' with the appropriate units.
-    #}
+    <h1>Weather in San Francisco</h1>
+    <p>on Saturday, {{date.strftime("%m/%d/%Y")}} your feelling {{ emotion }}.</p>
+    
+    
     <ul>
         <li>Temperature: {{temp}}° {{units_letter}}</li>
         <li>Description: {{description}} </li>
